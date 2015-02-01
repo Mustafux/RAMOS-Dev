@@ -1,62 +1,621 @@
-*{
-margin: 0;
+* {
 padding: 0;
+margin: 0;
+font-family: sans-serif;
 }
+
+#top-nav{
+float:right;
+display:inline;
+position:relative;
+top:1.5em;
+}
+
+#top-nav a{
+    padding: 1.15em 1.2em;
+    text-decoration: none;
+    list-style: none;
+    color:#e8f7fe;
+    font-family:'Oswald', sans-serif;
+    opacity: 0.8;
+    font-size: 1.25em;
+    transition: 0.3s all;
+}
+
+#top-nav a:hover{
+    opacity: 1;
+    background-color: #e8f7fe;
+    color:#0e3656;
+}
+
 
 #banner{
- width:100%;
- height: 400px;
- background-image: url("../img/background.jpg");
- background-size: cover;
- border-bottom: 10px #ccc solid;
+    position:fixed;
+	background-color: #0e3656;
+	width:100%;
+	height: 4.8em;
+    z-index: 2;
 }
+
+header{
+	background-color: #e8f7fe;
+	width:100%;
+	height: 48.5em;
+    background-image:url(../img/header1.png);
+    background-size: cover;
+    background-position: center center;
+    transition: 2s all;
+}
+/*
+.bxslider{
+    width:41%;
+    background-color: red;
+    height: 5em;
+    margin: 0 auto;
+    margin-top: 1.5%;
+    //display: none;
+}
+
+header:active{
+    transform: translate(0,20em);
+}
+
+label, input, span{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+input {
+    text-align:left;
+}
+
+
+input + span:after{
+    content:attr(title);
+    opacity: 0;
+    color:white;
+    transition: 1s opacity ease-out;
+}
+
+input:invalid + span:after{
+    opacity: 1;
+}
+*/
+
+
+blockquote {
+    font-family:'Oswald',sans-serif;
+    font-size:4.5em;
+    text-align: center;
+    padding-top: 1.2em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.45em;
+    color:#0e3656;
+}
+
 
 #logo{
-float:left; 
-position: absolute;
-margin: 20px 0 0 20px;
-}
-
-.top-nav{
-float:right;
-margin-top: 30px;
-margin-right: 20px;
-margin-bottom: 30px;    
-}
-.top-nav a{
-display:inline-block;
-margin-left: 20px;
-font-family:sans-serif;
-font-weight:900;    
-letter-spacing: 2px;
-color:white;
-text-decoration: none;
-padding: 5px;
-opacity: 0.7;
-}
-
-a:hover{
-background-color:transparent;
-opacity: 1.0;
-}
-
-#about-ramos{
-width:100%;
-}
-
-h3{
-text-align: center;
-margin:20px 0 20px 0;
-font-family: sans-serif;
-font-weight: 700;
-font-size:30px;    
-letter-spacing: 5px;
-clear:both;
+    margin-left: 0.7em;
+    margin-top: 0.7em;
+    float:left;
     
 }
 
-.skills{
-max-width: 1000px;
-background-color: #ccc;
-margin:0 auto;
+#ramos-untold{
+	background-color: #288ab1;
+	width:100%;
+	height: 49em;
+    //position:relative;
+    text-align: center;
+}
+
+#ramos-untold #describtion{
+    margin-top:4.85em;
+    display: inline-block;
+    width:100%;
+    //background-color: #e8f7fe;
+    //float: left;
+    //margin-left: 5px;
+}
+
+#describtion h1, #describtion p {
+    font-family: 'Oswald',sans-serif;
+    //color:#0e3656;
+    letter-spacing: 0.025em;
+    padding:0 7%;
+}
+
+#describtion p {
+    font-size: 200%;
+    text-transform: uppercase;
+    margin-bottom: 1.4em;
+    text-align: center;
+    color:#eee;
+    //background-color: #32a9eb;
+}
+
+
+#describtion h1{
+    font-size: 225%;
+    text-transform: uppercase;
+    margin-bottom: 0.1em;
+    text-align: justify;
+    padding:0 3%;
+    color:#eee;
+    letter-spacing: 0.05em;
+}
+
+
+#describtion a{
+    text-decoration: none;
+    font-size: 150%;
+    background-color: #0e3656;
+    color:#e8f7fe;
+    padding:1%;
+    font-family: 'Oswald',sans-serif;
+    //margin-top: 1em;
+    border-radius: 3%;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s all;
+}
+
+#describtion a:hover{
+    background-color:#ddd;
+    color:#288ab1;
+    //border:2px dotted #288ab1;
+}
+
+
+#ramos-untold img{
+    margin-top:3.25em;
+    //margin-left: 54%;
+}
+
+
+#ramos-team{
+	background-color: #e8f7fe;
+	width:100%;
+	height: 39em;
+    background-image:url(../img/code.jpg);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+}
+
+/*#ramos-team div{
+    width: 12.25%;
+    margin:0 auto;
+    position:relative;
+    
+}*/
+
+#meet-us{
+    display: inline-block;
+    margin-top: 1.95em;
+    color:#eee;
+    font-family: 'Oswald',sans-serif;
+    //text-align: left;
+    font-size: 250%;
+    float:left;
+    margin-left: 3%;
+    letter-spacing: 0.05em;
+}
+
+
+#ramos-team div img{
+    margin-top: 5.25em;
+    border-radius:50%;
+    border:3px solid white;
+    opacity: 0.95;
+    transition: 0.25s all;
+    width:100%;
+    display: inline-block;
+}
+
+#ramos-team div .name{
+    text-align: center;
+    font-family:'Oswald', sans-serif;
+    font-size: 125%;
+    color:white;
+    text-transform: uppercase;
+}
+
+#ramos-team div .position{
+    text-align: center;
+    font-family:'Oswald', sans-serif;
+    font-size: 100%;
+    color:white;
+}
+
+#ramos-team #team-members{
+    clear: both;
+    width:100%;
+    //margin: 0 auto;
+    background-color: #288ab1;
+    opacity: 0.85;
+    //position:relative;
+    //margin-top: -1em;
+}
+
+#ramos-team #team-members div{
+    width: 12.25%;
+    //margin: 0 auto;
+    display: inline-block;
+    margin:0 2%;
+    margin-bottom: 3em;
+}
+
+#ramos-team div img:hover {
+    border:3px dashed white;
+    opacity: 1;
+}
+
+
+
+
+/*
+#ramos-team p{
+    text-align: center;
+}
+
+
+#ramos-team p img{
+    width:12.5%;
+    margin: 0 2%;
+    border-radius: 50%;
+    margin-top: 7em;
+    border: 3px solid #0e3656;
+    opacity: 0.9;
+    display: inline-block;
+    transition: 0.25s all linear;
+}
+
+#ramos-team #team-names span{
+    width:17%;
+    display: inline-block;
+}
+
+#ramos-team span{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 150%;
+    color: #0e3656;
+}
+
+
+#ramos-team #team-members {
+    width: 100%;
+}
+
+#ramos-team #team-members img {
+    border-radius: 50%;
+    width: 12.5%;
+    margin:2%;
+    
+}
+#ramos-team p img:hover {
+    border: 5px solid #0e3656;
+    opacity: 1;
+    width:13%;
+}*/
+
+
+
+#ramos-services{
+	background-color: #32a9eb;
+	width:100%;
+	height: 49em;
+}
+
+
+#ramos-services div {
+    color: white;
+    width:47%;
+    margin: 0 auto;
+}
+
+#ramos-services #our-services{
+    //background-color: #eee;
+    float:left;
+    margin-top: 7em;
+    height: 40em;
+    margin-left: 1.75em;
+    text-align: center;
+}
+
+#ramos-services #our-services p{
+    text-align: left;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-family:'Oswald', sans-serif;
+    font-size: 135%;
+    color:#e8f7fe;
+    text-transform: uppercase;
+}
+
+/*#ramos-services #our-services + p{
+    font-size:150%;
+}*/
+
+#ramos-services #our-services img{
+    display: inline-block;
+    width: 35%;
+    padding:1%;
+    margin:1.6%;
+    border: 3px dashed #ccc;
+    background-color:#eee;
+    transition: 0.5s all;
+}
+
+#ramos-services #our-services #mob:hover{
+    background-color: #63d363;
+    border-color:#28b129;
+    border-style:dashed;
+}
+
+#ramos-services #our-services #web:hover{
+    background-color: #63b4d3;
+    border-color:#288ab1;
+    border-style:dashed;
+}
+
+#ramos-services #our-services #sec:hover{
+    background-color: #9b9b9b;
+    border-color:#6c6c6c;
+    border-style:dashed;
+}
+
+#ramos-services #our-services #design:hover{
+    background-color: #d37063;
+    border-color:#b13928;
+    border-style:dashed;
+}
+
+#ramos-services #request-service{
+    //background-color: blue;
+    float:right;
+    margin-top: 7em;
+    height: 40em;
+    margin-right: 1.75em;
+    display: none;
+}
+
+#ramos-services #request-service label{
+    font-family:'Oswald', sans-serif;
+    font-size: 105%;
+    text-transform: uppercase;
+    color:#e8f7fe;
+    display: inline-block;
+    cursor: pointer;   
+}
+
+#ramos-services #request-service #first-selection label{
+    color:#0e3656;
+}
+
+#ramos-services #request-service p{
+    text-align: left;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-family:'Oswald', sans-serif;
+    font-size: 135%;
+    color:#e8f7fe;
+    text-transform: uppercase;
+}
+
+#ramos-services #request-service input[type="radio"]{
+    text-align: left;
+    margin-left: 2.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    width:5%;
+    height: 1.5em;
+}
+
+#ramos-services #request-service input[type="radio"] + label {
+    display:inline-block;
+}
+
+#ramos-services #request-service #display-selection{
+    width:95%;
+    background-color: #eee;
+    height: 29em;
+    margin: 0 auto;
+    margin-top: 0.75em;
+    border: 3px dashed #ccc;
+    border-radius: 4px;
+    //color:red;
+}
+
+#first-selection {
+    width:100%;
+    margin-top:3px;
+    //background-color: red;
+    display: none;
+}
+
+#second-selection{
+    width:100%;
+    margin-top: 3px;
+    text-align: center;
+    display: none;
+}
+
+#second-selection img {
+    width:32.5%;
+    display: inline-block;
+    margin:0.25% 1.5%;
+}
+
+#second-selection img:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+    //border-style:dashed;
+    border: 1px dashed #0e3656;
+}
+
+#second-selection input {
+    padding:0.5%;
+    width:100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 100%;
+    margin: 0.25% 0;
+}
+
+#second-selection span{
+    color:red;
+    font-family: 'Oswald', sans-serif;
+    font-size: 100%;
+    letter-spacing: 0.075em;
+    color: #0e3656;
+}
+
+#second-selection input[type="button"]{
+    background-color: #0e3656;
+    border-style: none;
+    color:white;
+    margin-top:2%;
+    padding: 1% 0;
+    width:50%;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    transition: 0.5s all;
+}
+
+#second-selection input[type="button"]:hover{
+    background-color: #288ab1;
+    color: #eee;
+}
+/*#second-selection label{
+    color:red;
+    text-align: left;
+}*/
+
+#first-selection form input,textarea{
+    padding:0.5%;
+    width:100%;
+    font-family:'Oswald', sans-serif;
+    font-size: 100%;
+    margin:0.5% 0;
+    //color:#0e3656;
+}
+
+textarea{
+    text-transform: uppercase;
+}
+
+input[type="file"]{
+    color:#0e3656;
+}
+
+
+#first-selection form #send{
+    width:50%;
+    background-color:#0e3656 ;
+    border-style: none;
+    color:white;
+    letter-spacing: 0.05em;
+    float:right;
+    text-transform: uppercase;
+    font-family: 'Oswald',sans-serif;
+    padding:2% 0;
+    border-radius: 4px;
+    transition: 0.5s all;
+}
+
+#first-selection form #send:hover{
+    background-color: #288ab1;
+    color: #eee;
+}
+
+#view-req-service{
+    width:25%;
+    background-color:#0e3656 ;
+    border-style: none;
+    color:white;
+    letter-spacing: 0.05em;
+    //float:right;
+    text-transform: uppercase;
+    font-family: 'Oswald',sans-serif;
+    font-size: 120%;
+    padding:1.5% 0;
+    margin-top:0.5%;
+    border-radius: 4px;
+    transition: 0.5s all;
+}
+
+#view-req-service:hover{
+    background-color: #ddd;
+    color: #288ab1;
+}
+
+
+#ramos-contact{
+	background-color: #071434;
+	width:100%;
+	height: 49em;
+   // position: relative;
+    background-image:url(../img/team-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color:white;
+}
+
+#contact-details{
+    //margin-top: 2em;
+    background-color: #0e3656;
+    width:95%;
+    display: inline-block;
+    margin-top: 6em;
+    opacity: 0.9;
+    border-radius: 4px;
+    border: 2px dashed #288ab1;
+}
+
+#contact-details img {
+    margin: 1% 2%;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.5s all;
+}
+
+#contact-details img:hover{
+    opacity: 1;
+}
+
+#contact-details nav{
+    margin-top: 6em;
+}
+
+#contact-details nav a{
+    color: #288ab1;
+    text-decoration: none;
+    padding:1em;
+    font-family: 'Oswald',sans-serif;
+    font-size: 80%;
+    text-transform: uppercase;
+}
+
+h3{
+    font-family: 'Oswald',sans-serif;
+    padding:0.5% 0;
+    font-size: 80%;
+    text-transform: uppercase;
+    color: #288ab1;
+    letter-spacing: 0.05em;
+}
+
+#ramos-contact p{
+    font-size: 2.75em;
+    margin: 0.25em 0;
+    font-family: 'Oswald',sans-serif;
+    text-transform: uppercase;
 }

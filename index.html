@@ -1,33 +1,267 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>RAMOS Developers</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="css/animate.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" media="screen and (max-width:600px)" href="css/responsive-mobile.css"/>
+        <link rel="stylesheet" type="text/css" media="screen and (min-width:600px) and (max-width:800px)" href="css/responsive-tablet.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/smooth-scroll.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script type="text/javascript">
+            new WOW().init();
+        </script>
+        <script type="text/javascript">
+            smoothScroll.init();
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(document).scroll(function(){
+                    if($(document).width()>800)
+                    {
+                    var my_scroll=$(this).scrollTop();
+                    $('#scroll-value').html(my_scroll);
+                    if(my_scroll<740){
+                        $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#team').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    }if (my_scroll>740){
+                        $('#about-us').css('background-color','#288ab1').css('color','#eee').css('opacity',1);
+                        $('#team').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    } if (my_scroll>1480){
+                        $('#team').css('background-color','#3592ef').css('color','#eee').css('opacity',1);
+                        $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    } if(my_scroll>2120){
+                        $('#serve').css('background-color','#32a9eb').css('color','#eee').css('opacity',1);
+                        $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#team').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    } if(my_scroll>2880){
+                        $('#contact').css('background-color','#288ab1').css('color','#eee').css('opacity',1);
+                        $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#team').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    }
+                    }
+                    else 
+                    {
+                        $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#team').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                        $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8); 
+                    }
+                });
+                
+                
+                /*$('#about-us').click(function(){
+                    $(this).css('background-color','#288ab1').css('color','#eee').css('opacity',1);
+                    $('#team').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                });
+                $('#team').click(function(){
+                    $(this).css('background-color','#3592ef').css('color','#eee').css('opacity',1);
+                    $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);        
+                });
+                $('#describtion a').click(function(){
+                    $('#team').css('background-color','#3592ef').css('color','#eee').css('opacity',1);
+                    $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);        
+                });
+                $('#serve').click(function(){
+                    $(this).css('background-color','#32a9eb').css('color','#eee').css('opacity',1);
+                    $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#team').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#contact').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);        
+                });
+                $('#contact').click(function(){
+                    $(this).css('background-color','#288ab1').css('color','#eee').css('opacity',1);
+                    $('#about-us').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#team').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);
+                    $('#serve').css('background-color','#0e3656').css('color','#e8f7fe').css('opacity',0.8);        
+                });*/
+                $('#view-req-service').click(function(){
+                    $('#request-service').fadeIn(500);
+                });
+                $('#send-req-service').click(function(){
+                    $('#second-selection').fadeOut(500);
+                    $('#first-selection').delay(500).fadeIn(500);
+                });
+                $('#coffee-meeting').click(function(){
+                    $('#first-selection').fadeOut(500);
+                    $('#second-selection').delay(500).fadeIn(500);
+                });
+            });
+        </script>
+        <!--script>
+            $(document).ready(function(){
+                $('#view-req-service').click(function(){
+                    $('#request-service').fadeIn(500);
+                });
+            });
+        </script-->
+       <title>RAMOS Developers | Here for YOU!</title>
     </head>
     <body>
-       <div id="website-wrapper">
-            <header id="banner">
-                <div id="logo">
-                    <img src="img/logo.png">
+            <div id="banner">
+            <a href="index.html"><img id="logo" src="img/logo.png"/></a>
+            <nav id="top-nav" role="navigation">
+                <a id="about-us" data-scroll href="#ramos-untold">RAMOS UNTOLD</a>
+                <a id="team" data-scroll href="#ramos-team">TEAM</a>
+                <a id="serve" data-scroll href="#ramos-services">SERVICES</a>
+                <a id="contact" data-scroll href="#ramos-contact">KEEP IN TOUCH</a>
+            </nav>
+            </div>
+            <header>
+                <blockquote>
+                        Creativity &amp; Innovation
+                     <br/>
+                        Here for YOU
+                </blockquote>
+                    <!--ul class="bxslider">
+                        <li><img src="img/img01.jpg" title="Hi"/></li>
+                        <li><img src="img/img02.jpg" title="There"/></li>
+                        <li><img src="img/img03.jpg" title="RAMOS DEVELOPERS"/></li>
+                    </ul-->
+            </header>
+            <div id="ramos-untold">
+                <div id="describtion" class="wow fadeInUp">
+                    <h1>about us</h1>
+                    <p>RAMOS DEVELOPERS is a group of ..... Yea .. DEVELOPERS who are capable of crafting web/mobile apps, graphics designs, security consultant services &amp; educational materials. Our fine developers are specialized in the most modern &amp; cutting edge tecnologies to deliver the most perfect services you were waiting for</p>
+                    <a data-scroll href="#ramos-team">EXPLORE MORE</a>
+                </div><br/>
+                <img class="wow zoomIn" data-wow-delay="0.7s" src="img/about-ramos3.png"/>
+                <!--label for="age">Age:</label>
+                <input type="number" name="age" id="age" placeholder="18"/>
+                <span title="Age MUST be between 18 - 30"></span-->
+            </div>
+            <div id="ramos-team">
+                <p id="meet-us">MEET US</p>
+                <div id="team-members">
+                    <div class="wow bounceIn">
+                        <img src="img/bentiba2.png"/>
+                        <p class="name">Dr. Ahmed Bentiba</p>
+                        <p class="position">Godfather</p>
+                    </div>
+                    <div class="wow bounceIn" data-wow-delay="0.4s">
+                        <img src="img/matar.png"/>
+                        <p class="name">Rashid Al-Matar</p>
+                        <p class="position">Mobile Developer</p>
+                    </div>
+                    <div class="wow bounceIn" data-wow-delay="0.8s">
+                        <img src="img/az.png"/>
+                        <p class="name">Abdallah Ourad</p>
+                        <p class="position">Web/Mob Developer</p>
+                    </div>
+                    <div class="wow bounceIn" data-wow-delay="1.2s">
+                        <img src="img/mustafa.png">
+                        <p class="name">Mustafa Hammad</p>
+                        <p class="position">Web/Mob Developer</p>
+                    </div>
+                    <div class="wow bounceIn" data-wow-delay="1.6s">
+                        <img src="img/omar.png"/>
+                        <p class="name">Omar Abduljaleel</p>
+                        <p class="position">Web/Mob Developer</p>
+                    </div>
+                    <div class="wow bounceIn" data-wow-delay="2s">
+                        <img src="img/saeed2.png"/>
+                        <p class="name">Saeed Al-Mannaee</p>
+                        <p class="position">Graphics Design</p>
+                    </div>
                 </div>
-                <nav class="top-nav">
-                    <a href="#">ABOUT RAMOS</a>
-                    <a href="#">TEAM</a>
-                    <a href="#">PROJECTS</a>
-                    <a href="#">SERVICES</a>
-                    <a href="#">CONTACT</a>
-                </nav>
-            </header> 
-            <section id="about-ramos">
-                <h3>ABOUT RAMOS</h3>
-                    <div class="skills">
-                        Hi
-                        <div id="mob-skills"></div>
-                        <div id="web-skills"></div>
-                        <div id="security-skills"></div>
-                        <div id="education-skills"></div>
-                    </div>    
-           </section>
-       </div> 
+                <!--p><img class="wow bounceIn" src="img/bentiba2.png"/><br><span class="wow bounceIn" data-wow-delay="1s">Dr. Ahmed Bentiba</span></p>
+                <div id="team-members" class="wow fadeInUp">
+                    <p>
+                        <img src="img/matar.png"/>
+                        <img src="img/az.png"/>
+                        <img src="img/mustafa.png"/>
+                        <img src="img/omar.png"/>
+                        <img src="img/saeed.png"/>
+                    </p>
+                </div>
+                <div id="team-names" class="wow fadeInUp" data-wow-delay="1s">
+                    <p>
+                        <span>Rashid Al-Matar<br>Mobile Developer</span>
+                        <span>Abdallah Ourad<br>Web/Mob Developer</span>
+                        <span>Mustafa Hammad<br>Web/Mob Developer</span>
+                        <span>Omar Abduljaleel<br>Web/Mob Developer</span>
+                        <span>Saeed Al-Mannaee<br>Graphics Design</span>
+                    </p>
+                </div-->
+            </div>
+            <div id="ramos-services">
+                <div id="our-services">
+                    <p>We offer the following services</p>
+                    <img id="mob" class="wow fadeInUp" data-wow-delay="0.3s" src="img/mobile-applications.png"/>
+                    <img id="web" class="wow fadeInUp" data-wow-delay="0.6s" src="img/web-applications.png"/>
+                    <img id="sec" class="wow fadeInUp" data-wow-delay="0.9s" src="img/security-consultant.png"/>
+                    <img id="design" class="wow fadeInUp" data-wow-delay="1.2s" src="img/graphics-design.png"/>
+                    <input type="button" class="wow fadeInUp" data-wow-delay="1.5s" id="view-req-service" name="view-req-service" value="Request Service"/>
+                </div>
+                <div id="request-service">
+                    <p>Request a service</p>
+                    <input id="send-req-service" type="radio" name="req-service" value="send-req-service" /> 
+                    <label for="send-req-service">Send Proposal/Requirement document via Email</label><br/>
+                    <input id="coffee-meeting" type="radio" name="req-service" value="coffee-meeting" /> 
+                    <label for="coffee-meeting">Arrange a coffee meeting</label>
+                    <div id="display-selection">
+                        <div id="first-selection">
+                            <form method="post" action="">
+                                <label for="funame">Name</label><br/>
+                                <input type="text" id="funame" name="funame"/><br/>
+                                <label for="funame">Email</label><br/>
+                                <input type="email" id="email" name="email" placeholder="name@example.com"/><br/>
+                                <label for="subject">Subject</label><br/>
+                                <input type="text" id="subject" name="subject"/><br/>
+                                <label for="message-body">Message</label>
+                                <textarea id="message-body" name="message-body" rows="6" cols="50" placeholder="Type Messafe Here..."></textarea>
+                                <label for="funame">Proposal/Requirements Document</label><br/>
+                                <input type="file" id="file-upload" name="file-upload"/>
+                                <input type="submit" id="send" name="send" value="Send"/>
+                            </form>
+                        </div>
+                        <div id="second-selection">                            
+                            <img src="img/costa-new.png"/>
+                            <img src="img/starbucks-new.png"/>
+                            <img src="img/dunkin-new.png"/>
+                            <img src="img/tim-new.png"/>
+                            <img src="img/krispy-new.png"/>
+                            <img src="img/cinabon.png"/>
+                            <label for="meeting-date"><span>Date <span style="font-size:85%;">(mm/dd/yyyy) Format</span></span></label>
+                            <input type="date" id="meeting-date" name="meeting-date"/>
+                            <label for="meeting-time"><span>Time <span style="font-size:85%;">(hh:mm AM/PM) Format</span></span></label>
+                            <input type="time" id="meeting-time" name="meeting-time"/><br/>
+                            <input type="button" id="confirm" name="confirm" value="Confirm"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ramos-contact">
+                <div id="contact-details">
+                    <p class="wow fadeInUp"> Send your questions via e-mail</p>
+                    <a href="mailto:ramos-dev@gmail.com" target="_blank"><img class="wow fadeInUp" src="img/email-128.png"/></a>
+                    <!--span>ramosdev@gmail.com</span-->
+                    <p style="font-size:1em;margin-top:3.5em;" class="wow fadeInUp"> Stay tuned to our news, activities &amp; projects by<br/>following &amp; subscribing to our accounts on<br/>social networks </p>
+                    <a href="#"><img class="wow fadeInUp" src="img/facebook-64.png"/></a>
+                    <a href="#"><img class="wow fadeInUp" src="img/twitter-64.png"/></a>
+                    <a href="#"><img class="wow fadeInUp" src="img/github-64.png"/></a>
+                    <nav class="wow fadeInUp">
+                        <a href="#">JOBS</a>
+                        <a href="#">SITEMAP</a>
+                        <a href="#">Volunteeing</a>
+                    </nav>
+                    <h3 class="wow fadeInUp">All Copyrights are reserved for RAMOS DEVELOPERS &copy; 2014</h3>
+                </div>
+            </div>
     </body>
 </html>
